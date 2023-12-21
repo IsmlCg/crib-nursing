@@ -28,7 +28,15 @@ cd crib-nursing
 To install the project dependencies, run:
 
 ```shell
-go mod install
+npm install
+npm install -g firebase-tools
+Get-ExecutionPolicy
+Set-ExecutionPolicy RemoteSigned
+firebase login
+firebase init
+firebase init hosting
+firebase deploy
+
 ```
 
 ## Building
