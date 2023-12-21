@@ -1,8 +1,64 @@
-# React + Vite
+# Crib-and-nursing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [Node.js](https://nodejs.org/) installed
+- [npm](https://www.npmjs.com/) (Node Package Manager) installed
+- [Firebase CLI](https://firebase.google.com/docs/cli) installed
 
-Currently, two official plugins are available:
+Designed to provide exceptional care to children and adults requiring nursing assistance, "Crib and Nursing" is a comprehensive healthcare initiative. As a nursing home, we provide specialized care for adults in need of specialized nursing care, while creating a nurturing environment for babies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Contents
+
+- [Crib and nursing](#Crib-and-nursing)
+  - [Contents](#contents)
+  - [About](#about)
+  - [Dependencies](#dependencies)
+  - [Building](#building)
+  - [Testing](#testing)
+  - [License](#license)
+
+## Clone the repository
+
+```bash
+git clone https://github.com/IsmlCg/crib-nursing.git
+cd crib-nursing
+```
+
+## Dependencies
+
+To install the project dependencies, run:
+
+```shell
+npm install
+npm install -g firebase-tools
+Get-ExecutionPolicy
+Set-ExecutionPolicy RemoteSigned
+firebase login
+firebase init
+firebase init hosting
+firebase deploy
+
+```
+
+## Building
+
+To build the binary, run:
+
+```sh
+make build
+```
+
+## Testing
+
+To run tests, run:
+
+```shell
+make test
+```
+
+To run tests with coverage, run:
+
+```shell
+go test -v -covermode=count  ./...
+```
+
+## License
