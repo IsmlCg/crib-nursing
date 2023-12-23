@@ -30,6 +30,7 @@ To install the project dependencies, run:
 ```shell
 npm install
 npm install -g firebase-tools
+npm install firebase
 Get-ExecutionPolicy
 Set-ExecutionPolicy RemoteSigned
 firebase login
