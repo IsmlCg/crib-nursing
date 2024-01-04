@@ -4,6 +4,7 @@ import Dashboard from "./components/Dashboard";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 import JobRoleOverview from "./components/JobRoleOverview";
+import NotFound from "./components/NotFound";
 function App() {
   return (
     <Router>
@@ -12,6 +13,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/job-role-overview" element={<JobRoleOverview />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </Router>
   );

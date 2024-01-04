@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./../assets/logo-menu.svg";
 import Menu from "./Menu";
+import { Link } from "react-router-dom";
 function JobRoleOverview() {
   return (
     <>
@@ -9,9 +10,9 @@ function JobRoleOverview() {
         <div className="row mb-7">
           <div className="col-md mb-3 mb-md-0">
             <div className="mb-3">
-              <a className="link link-secondary" href="./page-careers.html">
+              <Link className="link link-secondary" href="../dashboard">
                 <i className="bi-arrow-left small me-1"></i> Back to Listings
-              </a>
+              </Link>
             </div>
 
             <h1 className="mb-0">Product Manager</h1>
@@ -27,17 +28,7 @@ function JobRoleOverview() {
         <div className="row">
           <div className="col-lg-3 order-lg-2 mb-5 mb-lg-0">
             <div id="stickyBlockStartPoint">
-              <div
-                className="js-sticky-block card card-borderless bg-soft-dark"
-                data-hs-sticky-block-options='{
-             "parentSelector": "#stickyBlockStartPoint",
-             "targetSelector": "#header",
-             "breakpoint": "lg",
-             "startPoint": "#stickyBlockStartPoint",
-             "endPoint": "#stickyBlockEndPoint",
-             "stickyOffsetTop": 20
-           }'
-              >
+              <div className="js-sticky-block card card-borderless bg-soft-dark">
                 <div className="card-body">
                   <dl>
                     <dt>Application Deadline:</dt>
