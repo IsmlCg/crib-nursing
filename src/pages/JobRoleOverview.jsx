@@ -1,11 +1,9 @@
 import React from "react";
-import logo from "./../assets/logo-menu.svg";
-import Menu from "./Menu";
+import logo from "../assets/logo-menu.svg";
 import { Link } from "react-router-dom";
 function JobRoleOverview() {
   return (
     <>
-      <Menu />
       <div className="container content-space-1 content-space-b-lg-3">
         <div className="row mb-7">
           <div className="col-md mb-3 mb-md-0">
@@ -70,7 +68,6 @@ function JobRoleOverview() {
           <div className="col-lg-9">
             <div className="mb-7">
               <p>Hello 👋</p>
-
               <p>I'm Christina-CEO here at Unify.</p>
             </div>
           </div>

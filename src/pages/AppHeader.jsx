@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "./../assets/logo-menu.svg";
-function Menu() {
+import logo from "../assets/logo-menu.svg";
+function Header() {
   return (
     <header
       id="header"
@@ -106,4 +106,4 @@ function Menu() {
     </header>
   );
 }
-export default Menu;
+export default Header;

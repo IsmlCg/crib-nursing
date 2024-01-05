@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, firestore } from "../firebase"; // Adjust the path as needed
+import { auth, firestore } from "../../assets/js/firebase"; // Adjust the path as needed
 import { collection, addDoc } from "firebase/firestore";
 
 async function RegisterUser(email, password) {

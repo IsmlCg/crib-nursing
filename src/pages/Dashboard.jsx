@@ -1,12 +1,10 @@
 // Dashboard.js
 import React from "react";
-import "./../App.css";
-import Menu from "./Menu";
+
 import { Link } from "react-router-dom";
 const Dashboard = () => {
   return (
     <>
-      <Menu />
       <div className="container content-space-t-1 content-space-lg-1 content-space-b-1">
         <div className="d-grid gap-3">
           <Link className="card" to="../job-role-overview">
