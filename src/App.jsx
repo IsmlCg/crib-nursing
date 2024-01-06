@@ -8,14 +8,16 @@ import Dashboard from "./pages/Dashboard";
 import CrudJobs from "./pages/crud-jobs/CrudJobs";
 import AppHeader from "./pages/AppHeader";
 import AppFooter from "./pages/AppFooter";
+import { Container } from "react-bootstrap";
 const App = () => {
   return (
-    <div>
+    <Container>
       <AppHeader />
       <main>
         <Router>
           <Routes>
             <Route path="/" element={<SignIn />} />
+            <Route path="/sign-in" element={<SignIn />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="jobs" element={<CrudJobs />}></Route>
             <Route path="/sign-up" element={<SignUp />} />
@@ -25,7 +27,7 @@ const App = () => {
         </Router>
       </main>
       <AppFooter />
-    </div>
+    </Container>
   );
 };
 

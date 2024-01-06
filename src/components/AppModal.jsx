@@ -11,12 +11,12 @@ const AppModal = ({ isHidden, onClose, handleSubmit, children }) => {
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
           {children}
-          <Button variant="light" onClick={onClose}>
-            Close
-          </Button>
-          <Button className="float-end" type="submit">
-            Save
-          </Button>
+          <div className="d-flex justify-content-between content-space-t-1">
+            <Button variant="light" onClick={onClose}>
+              Close
+            </Button>
+            <Button type="submit">Save</Button>
+          </div>
         </Form>
       </Modal.Body>
       <Modal.Footer></Modal.Footer>

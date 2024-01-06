@@ -4303,8 +4303,8 @@ textarea.form-control-lg {
   --bs-list-group-border-color: #dce0e5;
   --bs-list-group-border-width: 0.0625rem;
   --bs-list-group-border-radius: 0.5rem;
-  --bs-list-group-item-padding-x: 1rem;
-  --bs-list-group-item-padding-y: 0.75rem;
+  --bs-list-group-item-padding-x: 0px;
+  --bs-list-group-item-padding-y: 0px;
   --bs-list-group-action-color: #677788;
   --bs-list-group-action-hover-color: #677788;
   --bs-list-group-action-hover-bg: #F5F7FA;

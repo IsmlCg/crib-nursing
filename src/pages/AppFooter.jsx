@@ -1,59 +1,63 @@
-// Footer.js
-
 import React from "react";
+import { Row, Col, ListGroup } from "react-bootstrap";
+import { FaFacebook, FaGithub, FaTwitter, FaSlack } from "react-icons/fa";
 
 const Footer = () => {
   return (
     // ========== FOOTER ==========
-    <footer className="container py-4">
-      <div className="row align-items-md-center text-center text-md-start">
-        <div className="col-md mb-3 mb-md-0">
+    <footer className="py-4 bg-light">
+      <Row className="align-items-md-center text-center text-md-start">
+        <Col md>
           <p className="fs-5 mb-0">© Ismael Cardenas G. 2023.</p>
-        </div>
+        </Col>
 
-        <div className="col-md d-md-flex justify-content-md-end">
+        <Col md="" className="d-md-flex justify-content-md-end">
           {/* Socials */}
-          <ul className="list-inline mb-0">
-            <li className="list-inline-item">
+          <ListGroup horizontal>
+            <ListGroup.Item className="">
               <a
-                className="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
+                className="btn btn-ghost-secondary rounded-circle"
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.facebook.com/mi.enfermera.399"
               >
-                <i className="bi-facebook"></i>
+                <FaFacebook />
               </a>
-            </li>
-            <li className="list-inline-item">
+            </ListGroup.Item>
+            <ListGroup.Item>
               <a
-                className="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
+                className="btn btn-ghost-secondary rounded-circle"
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://github.com/IsmlCg/horse-and-breeder"
               >
-                <i className="bi-github"></i>
+                <FaGithub />
               </a>
-            </li>
-            <li className="list-inline-item">
+            </ListGroup.Item>
+            <ListGroup.Item>
               <a
-                className="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
+                className="btn btn-ghost-secondary rounded-circle"
                 target="_blank"
+                rel="noopener noreferrer"
                 href="#"
               >
-                <i className="bi-twitter"></i>
+                <FaTwitter />
               </a>
-            </li>
-            <li className="list-inline-item">
+            </ListGroup.Item>
+            <ListGroup.Item>
               <a
-                className="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
+                className="btn btn-ghost-secondary rounded-circle"
                 target="_blank"
+                rel="noopener noreferrer"
                 href="#"
               >
-                <i className="bi-slack"></i>
+                <FaSlack />
               </a>
-            </li>
-          </ul>
+            </ListGroup.Item>
+          </ListGroup>
           {/* {End Socials } */}
-        </div>
-      </div>
+        </Col>
+      </Row>
     </footer>
     // ========== END FOOTER ==========
   );
