@@ -22,4 +22,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-firebase.config.js
+# .gitignore
+src/assets/js/firebase.js
