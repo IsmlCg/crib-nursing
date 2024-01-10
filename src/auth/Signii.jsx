@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from "./../../assets/logo.svg";
-import wave from "./../../assets/wave-pattern.svg";
+import logo from "../assets/logo.svg";
+import wave from "../assets/wave-pattern.svg";
 import FormSignIn from "./FormSignIn.jsx";
 const SignIn = () => {
   const containerStyle = {
@@ -30,9 +30,7 @@ const SignIn = () => {
                 <div className="card card-shadow card-login">
                   <div className="row">
                     <div className="col-md-8">
-                      <div className="card-body">
-                        <FormSignIn />
-                      </div>
+                      <div className="card-body">{/* <FormSignIn /> */}</div>
                     </div>
                     <div
                       className="col-md-4 d-md-flex justify-content-center flex-column bg-soft-primary p-8 p-md-5"

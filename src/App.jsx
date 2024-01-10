@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SignIn from "./components/auth/SignIn";
-import SignUp from "./components/auth/SignUp";
+import SignIn from "./auth/SignIn";
+import SignUp from "./auth/SignUp";
 import JobRoleOverview from "./pages/JobRoleOverview";
 import NotFound from "./pages/NotFound";
 import Dashboard from "./pages/Dashboard";

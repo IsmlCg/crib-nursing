@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth, firestore } from "../../assets/js/firebase.js";
+import { auth, firestore } from "../assets/js/firebase.js";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import googleIcon from "./../../assets/google-icon.svg";
-import wave from "./../../assets/wave-pattern.svg";
+import googleIcon from "../assets/google-icon.svg";
+import wave from "../assets/wave-pattern.svg";
 async function getUserById(userId) {
   try {
     const usersCollection = collection(firestore, "users");

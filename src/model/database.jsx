@@ -1,14 +1,37 @@
 import { firestore } from "../assets/js/firebase.js";
 
 import {
+  addDoc,
+  doc,
   collection,
   getDocs,
-  addDoc,
   query,
-  where,
   updateDoc,
-  doc,
+  where,
 } from "firebase/firestore";
+
+async function getCollectionById(collectionName, id) {
+  try {
+    const usersCollection = collection(firestore, collectionName);
+    // Create a query to get users with a specific role
+    const q = query(usersCollection, where("uid", "==", id));
+
+    // Execute the query
+    const querySnapshot = await getDocs(q);
+    // Extract data from the query result
+    // Check if the query returned any documents
+    if (querySnapshot.size === 1) {
+      // Extract data from the query result
+      return querySnapshot.docs[0].data();
+    } else {
+      return null;
+    }
+  } catch (error) {
+    console.error("Error fetching user by ID:", error.message);
+    // Handle the error, e.g., show a message to the user
+  }
+}
+
 async function getData(collectionName) {
   try {
     // Get documents from Firestore collection
@@ -90,4 +113,4 @@ async function handleUpdate(data, collectionName, docId) {
     console.error("Error updating document:", error);
   }
 }
-export { getData, setData, handleDeleteId, handleUpdate };
+export { getData, getCollectionById, setData, handleDeleteId, handleUpdate };

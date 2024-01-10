@@ -8,18 +8,15 @@ const AppModal = ({ isHidden, onClose, handleSubmit, children }) => {
       <Modal.Header closeButton>
         <Modal.Title>Translations</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <Form onSubmit={handleSubmit}>
-          {children}
-          <div className="d-flex justify-content-between content-space-t-1">
-            <Button variant="light" onClick={onClose}>
-              Close
-            </Button>
-            <Button type="submit">Save</Button>
-          </div>
-        </Form>
-      </Modal.Body>
-      <Modal.Footer></Modal.Footer>
+      <Form onSubmit={handleSubmit}>
+        <Modal.Body>{children}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="light" onClick={onClose}>
+            Close
+          </Button>
+          <Button type="submit">Save</Button>
+        </Modal.Footer>
+      </Form>
     </Modal>
   );
 };

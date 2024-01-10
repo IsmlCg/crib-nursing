@@ -14,16 +14,22 @@ import {
   handleDeleteId,
   handleUpdate,
 } from "../../model/database";
+import SignIn from "../../auth/SignIn";
 const CrudJobs = () => {
   // start modal
   const collectionName = "jobs";
+  const [isSignedIn, setIsSignedIn] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  // const [dataRow, setDataRow] = useState(getData(collectionName));
   const [formData, setFormData] = useState({
     jobtitle_job: "",
     qualification_job: 0,
     jobdescription_job: "",
   });
+
+  const handleSignIn = () => {
+    setIsSignedIn(true);
+  };
+
   const showModalHandler = (row) => {
     // console.log(dataRow);
     if (row.id) {
@@ -157,29 +163,38 @@ const CrudJobs = () => {
   ];
   return (
     <div>
-      <AppModal
-        isHidden={showModal}
-        onClose={hideModalHandler}
-        handleSubmit={handleSubmit}
-      >
-        <AppInput
-          initField={initFieldJobTitle}
-          updateFieldValue={updateValue}
-        />
-        <AppSelect initSelect={qualification} updateSelect={updateValue} />
-        <AppTextArea
-          initTextArea={jobDescription}
-          onTextareaChange={updateValue}
-        />
-      </AppModal>
-      <Button className="btn btn-primary m-1" onClick={showModalHandler}>
-        Show modal
-      </Button>
-      <CustomDataTable
-        columns={dynamicColumns}
-        collectionName={collectionName}
-        getData={getData}
-      />
+      {isSignedIn ? (
+        <>
+          <AppModal
+            isHidden={showModal}
+            onClose={hideModalHandler}
+            handleSubmit={handleSubmit}
+          >
+            <AppInput
+              initField={initFieldJobTitle}
+              updateFieldValue={updateValue}
+            />
+            <AppSelect initSelect={qualification} updateSelect={updateValue} />
+            <AppTextArea
+              initTextArea={jobDescription}
+              onTextareaChange={updateValue}
+            />
+          </AppModal>
+          <Button
+            className="btn btn-soft-primary btn-sm"
+            onClick={showModalHandler}
+          >
+            Add new job
+          </Button>
+          <CustomDataTable
+            columns={dynamicColumns}
+            collectionName={collectionName}
+            getData={getData}
+          />
+        </>
+      ) : (
+        <SignIn onSignIn={handleSignIn} />
+      )}
     </div>
   );
 };
