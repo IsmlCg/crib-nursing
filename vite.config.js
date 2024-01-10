@@ -7,4 +7,11 @@ export default defineConfig({
   build: {
     outDir: "dist", // Specify the output directory
   },
+  optimizeDeps: {
+    include: [
+      "react-contexify",
+      "react-select",
+      "react-bootstrap-table2-filter",
+    ],
+  },
 });

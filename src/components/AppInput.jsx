@@ -40,3 +40,6 @@ const AppInput = ({ initField, updateFieldValue }) => {
 };
 
 export default AppInput;
+<button type="button" className="btn btn-soft-danger btn-sm">
+  Delete
+</button>;

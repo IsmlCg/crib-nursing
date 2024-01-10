@@ -21649,3 +21649,28 @@ a:hover .text-inherit {
 }
 
 
+/* Custom styles for DataTable Previous and Next buttons */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 5px 10px; /* Adjust padding as needed */
+  margin: 2px; /* Adjust margin as needed */
+}
+
+/* Style for the active page button */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  color: white;
+    background-color: #0abf53;
+    border: 1px solid #0abf53;
+    border-radius: 50% !important;
+}
+/* Custom styles for DataTable info and pagination */
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+  display: inline-block;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+/* Add additional styles as needed */
+/* Custom style to push DataTable pagination to the right */
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+}

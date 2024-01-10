@@ -5,7 +5,7 @@ import { FaFacebook, FaGithub, FaTwitter, FaSlack } from "react-icons/fa";
 const Footer = () => {
   return (
     // ========== FOOTER ==========
-    <footer className="py-4 bg-light">
+    <footer>
       <Row className="align-items-md-center text-center text-md-start">
         <Col md>
           <p className="fs-5 mb-0">© Ismael Cardenas G. 2023.</p>

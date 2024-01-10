@@ -9,6 +9,7 @@ import CrudJobs from "./pages/crud-jobs/CrudJobs";
 import AppHeader from "./pages/AppHeader";
 import AppFooter from "./pages/AppFooter";
 import { Container } from "react-bootstrap";
+
 const App = () => {
   return (
     <Container>

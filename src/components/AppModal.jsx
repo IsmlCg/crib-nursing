@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, Modal, Row, Col } from "react-bootstrap";
+import { Button, Form, Modal } from "react-bootstrap";
 
 const AppModal = ({ isHidden, onClose, handleSubmit, children }) => {
   if (!isHidden) return null;

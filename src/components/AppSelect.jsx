@@ -15,10 +15,13 @@ const AppSelect = ({ initSelect, updateSelect }) => {
         aria-label="Select options"
         value={selectedOption}
         name={name}
+        required
         onChange={handleOptionChange}
         id={id}
       >
-        <option defaultValue>Choose...</option>
+        <option value="" defaultValue>
+          Choose...
+        </option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
